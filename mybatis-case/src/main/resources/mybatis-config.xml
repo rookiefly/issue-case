@@ -8,7 +8,7 @@
         <package name="com.rookiefly.issue.mybatiscase.model"/>
     </typeAliases>
     <mappers>
-        <!--<mapper resource="mybatis/mapper/CityMapper.xml"/>-->
+        <mapper resource="mybatis/mapper/GorderMapper.xml"/>
         <mapper resource="mybatis/mapper/HotelMapper.xml"/>
     </mappers>
 </configuration>

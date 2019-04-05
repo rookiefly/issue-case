@@ -4,25 +4,40 @@ drop table if exists `order`;
 
 create table `gorder`
 (
-    gorder_id   int primary key auto_increment,
-    user_id     varchar(255),
+    gorderId   int primary key auto_increment,
+    userId     varchar(255),
     amount      double,
-    create_time timestamp,
-    update_time timestamp,
-    index g_user_id_index (user_id)
+    createTime timestamp,
+    updateTime timestamp,
+    index g_user_id_index (userId)
 );
+
+insert into `gorder` (gorderId, userId, amount)
+values (1, 'rookiefly@163.com', 234.5);
+
+insert into  `gorder` (gorderId, userId, amount)
+values (2, 'rookiefly@126.com', 136);
 
 create table `order`
 (
-    order_id    int primary key auto_increment,
-    gorder_id   varchar(255),
-    user_id     varchar(255),
+    orderId    int primary key auto_increment,
+    gorderId   int,
+    userId     varchar(255),
     amount      double,
-    create_time timestamp,
-    update_time timestamp,
-    index user_id_index (user_id),
-    index gorder_id_index (gorder_id)
+    createTime timestamp,
+    updateTime timestamp,
+    index user_id_index (orderId),
+    index gorder_id_index (gorderId)
 );
+
+insert into `order` (orderId, gorderId, userId, amount)
+values (1, 1, 'rookiefly@163.com', 100);
+
+insert into `order` (orderId, gorderId, userId, amount)
+values (2, 1, 'rookiefly@163.com', 134.5);
+
+insert into `order` (orderId, gorderId, userId, amount)
+values (3, 2, 'rookiefly@126.com', 136);
 
 drop table if exists `city`;
 drop table if exists `hotel`;
