@@ -26,6 +26,8 @@ public class MybatisCaseApplicationTests {
     @Test
     public void testMybatisNestedMap(){
         List<Gorder> gorderList = gorderMapper.gorderListNested("rookiefly@163.com");
-        Assert.assertEquals(2, gorderList.size());
+        Assert.assertEquals(1, gorderList.size());
+        Gorder gorder = gorderList.get(0);
+        Assert.assertEquals(2, gorder.getOrderList().size());
     }
 }
