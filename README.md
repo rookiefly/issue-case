@@ -14,6 +14,7 @@ mybatis(mybatis 3.0.X有问题，3.2.X已修复 )在使用collection、associati
 <==  Row: 1, rookiefly@163.com, 234.5, 2, 134.5
 <==  Total: 2
 [Gorder(gorderId=1, userId=rookiefly@163.com, amount=234.5, createTime=null, updateTime=null, order=null, orderList=[Order(orderId=1, gorderId=1, userId=rookiefly@163.com, amount=234.5, createTime=null, updateTime=null), Order(orderId=2, gorderId=1, userId=rookiefly@163.com, amount=234.5, createTime=null, updateTime=null)])]
+```
 - ### dubbo case
 使用dubbo时, dubbo调用端碰到过如下异常 (截止dubbo 2.6.5版本):
 ```java
